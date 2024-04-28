@@ -58,7 +58,7 @@ You should first checkout the 105 bugs in Catena4j and then repair these 105 bug
 ./checkout_105.sh  #checkout 105 bugs
 ./start.sh  #repair 105 bugs
 ```
-If ARJA-e can generate plausible patch(es), the plausible patch(es) are located in `./105_bugs_with_src/$bug_project/arja-e/`. Otherwise, the `./105_bugs_with_src/$bug_project/arja-e/` folder does not exist.
+If ARJA-e can generate plausible patch(es), the plausible patch(es) are located in `./105_bugs_with_src/$BUG_PROJECT/arja-e/`. Otherwise, the `./105_bugs_with_src/$BUG_PROJECT/arja-e/` folder does not exist.
 
 
 If you have any questions, you can go to the [ARJA-e](https://github.com/yyxhdy/arja/tree/arja-e) repository or create issues for more information.
