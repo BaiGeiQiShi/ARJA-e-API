@@ -1,4 +1,4 @@
-# SimFix
+# ARJA-e
 
 ## 1. Environment
 
@@ -14,7 +14,7 @@
 #### 2.1 Create the docker image
 
 ```shell
-docker build -t simfix-env .
+docker build -t arja-e-env .
 ```
 
 This docker image includes **Defects4J**, **CatenaD4J**, and **JDK 1.8**.
@@ -22,64 +22,43 @@ This docker image includes **Defects4J**, **CatenaD4J**, and **JDK 1.8**.
 #### 2.2 Create the container
 
 ```shell
-docker run -it --name=simfix simfix-env /bin/bash
+docker run -it --name=arja-e arja-e-env /bin/bash
 ```
 
 #### 2.3 Clone the SimFix repository
 
-At the root of this container, we clone the SimFix repository.
+At the root of this container, we clone the ARJA-e repository.
 
 ```shell
 cd /
-git clone https://github.com/BaiGeiQiShi/SimFixAPI.git
+git clone https://github.com/BaiGeiQiShi/ARJA-e-API.git
 ```
 
-#### 2.4 Install dependencies and Setup
-After testing, we found that using **pip** in the Docker file might cause image creation to fail, so configuration inside the container is required.
+#### 2.4 Setup
+Create the working directory.
 ```shell
-cd ./SimFixAPI
-./setup.sh
+cd ./ARJA-e-API
+mkdir 105_bugs_with_src
 ```
 
 ## 3. Test Installation
-It takes about 4-5 hours to finish the repair.
+It takes about 2 hours to finish the repair.
 ```
 # Generating the patches
 cd 105_bugs_with_src
-catena4j checkout -p Chart -v 18b2 -w ./Chat18b2
+catena4j checkout -p Chart -v 18b2 -w ./Chart18b2
 cd ..
-./start_simfix.sh
+./start.sh
 ```
-After finishing the repair, the results are in folders: `log` and `patch`.
-
-* `log` : debug output, including buggy statements already tried, patches and reference code snippet for correct patch generation.
-
-* `patch` : a single source file repaired by *SimFix* that can pass the test suite. In the source file, you can find the patch, which is formatted as (example of Chart_1):
-
-  ```java
-  // start of generated patch
-  int index=this.plot.getIndexOf(this);
-  CategoryDataset dataset=this.plot.getDataset(index);
-  if(dataset==null){
-  return result;
-  }
-  // end of generated patch
-  /* start of original code
-          int index = this.plot.getIndexOf(this);
-          CategoryDataset dataset = this.plot.getDataset(index);
-          if (dataset != null) {
-              return result;
-          }
-   end of original code*/
-  ```
+After finishing the repair, the generated patches are in `./105_bugs_with_src/Chart18b2/arja-e/`.
 
 ## 4. Usage
 You should first checkout the 105 bugs in Catena4j and then repair these 105 bugs
 ```shell
 ./checkout_105.sh  #checkout 105 bugs
-./start_simfix.sh  #repair 105 bugs
+./start.sh  #repair 105 bugs
 ```
-After finishing the repair, you can also check the results in folders: `log` and `patch`.
+If ARJA-e can generate plausible patch(es), the plausible patch(es) are located in `./105_bugs_with_src/$bug_project/arja-e/`. Otherwise, the `./105_bugs_with_src/$bug_project/arja-e/` folder does not exist.
 
 
-If you have any questions, you can go to the [SimFix](https://github.com/xgdsmileboy/SimFix.git) repository or create issues for more information.
+If you have any questions, you can go to the [ARJA-e](https://github.com/yyxhdy/arja/tree/arja-e) repository or create issues for more information.
