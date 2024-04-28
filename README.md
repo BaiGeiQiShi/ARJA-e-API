@@ -25,7 +25,7 @@ This docker image includes **Defects4J**, **CatenaD4J**, and **JDK 1.8**.
 docker run -it --name=arja-e arja-e-env /bin/bash
 ```
 
-#### 2.3 Clone the SimFix repository
+#### 2.3 Clone the ARJA-e repository
 
 At the root of this container, we clone the ARJA-e repository.
 
