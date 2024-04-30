@@ -60,7 +60,7 @@ Since ARJA-e couples fault localization, we can only wait for the complete repai
 After finishing the repair, the generated patches are in `./105_bugs_with_src/Chart18b2/arja-e/`.
 
 ## 7. Experiment Reproduction
-It may take about **20 days** to finish the entire experiment. If you want to fully replicate our experiments on ARJA-e, please first checkout the 105 bugs in Catena4j and then repair these 105 bugs. You can also modify `105_bugs.txt` to determine the bugs to be fixed.
+It may take about **13 days** to finish the entire experiment. If you want to fully replicate our experiments on ARJA-e, please first checkout the 105 bugs in Catena4j and then repair these 105 bugs. You can also modify `105_bugs.txt` to determine the bugs to be fixed.
 
 ```shell
 ./checkout_105.sh  #checkout 105 bugs
