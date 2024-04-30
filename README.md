@@ -52,7 +52,7 @@ git clone https://github.com/BaiGeiQiShi/ARJA-e-API.git
 
 
 ## 6. Quick Test
-Since ARJA-e contains fault localization, we can only wait for the complete repair result. It takes about **2 hours** to finish the repair.
+Since ARJA-e couples fault localization, we can only wait for the complete repair result. It takes about **2 hours** to finish the repair.
 ```
 # Generate the patches
 ./start.sh
