@@ -71,6 +71,7 @@ If ARJA-e can generate plausible patch(es), the plausible patch(es) are located 
 
 ## 8. Key Files
 ```
+   |——./105_bugs_with_src/            //buggy project directory
    |——105_bugs.txt                    //bug_id list(only fix bugs within this file)
    |——checkout_105.sh                 //download buggy project in 105_bugs.txt
    |——time-info.txt                   //record running time
