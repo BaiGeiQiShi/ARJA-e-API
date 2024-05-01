@@ -1,5 +1,5 @@
 # ARJA-e
-This repository is used to replicate the experiments of article **"Towards Effective Multi-Hunk Bug Repair: Detecting, Creating, Evaluating, and Understanding Indivisible Bugs"** on ARJA-e. If you want to learn more about ARJA-e, please follow the original repository of [ARJA-e](https://github.com/yyxhdy/arja/tree/arja-e).
+This repository is used to replicate the experiments of article **"Detecting, Creating, Repairing, and Understanding Indivisible Multi-Hunk Bugs"** on ARJA-e. If you want to learn more about ARJA-e, please follow the original repository of [ARJA-e](https://github.com/yyxhdy/arja/tree/arja-e).
 
 ## 1. Modification
 To successfully run the experiments, we have made two modifications:
