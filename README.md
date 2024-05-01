@@ -69,7 +69,7 @@ It may take about **13 days** to finish the entire experiment. If you want to fu
 
 If ARJA-e can generate plausible patch(es), the plausible patch(es) are located in `./105_bugs_with_src/$BUG_PROJECT/arja-e/`. Otherwise, the `./105_bugs_with_src/$BUG_PROJECT/arja-e/` folder does not exist.
 
-## 8. Key Files
+## 8. Structure of the Directories
 ```
    |——./105_bugs_with_src/            //buggy project directory
    |——105_bugs.txt                    //bug_id list(only fix bugs within this file)
